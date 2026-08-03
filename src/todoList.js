@@ -8,9 +8,7 @@ class TodoList {
     }
 
     removeProject(name) {
-        this.projects = this.projects.filter(
-            project => project.name !== name
-        );
+        this.projects = this.projects.filter((project) => project.name !== name);
     }
 }
 

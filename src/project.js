@@ -9,9 +9,7 @@ class Project {
     }
 
     removeTodo(title) {
-        this.todos = this.todos.filter(
-            todo => todo.title !== title
-        );
+        this.todos = this.todos.filter((todo) => todo.title !== title);
     }
 }
 

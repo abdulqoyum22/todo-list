@@ -6,7 +6,16 @@ export function saveProjects(todoList) {
 }
 
 export function loadProjects() {
-    const data = localStorage.getItem("projects");
-    if (!data) return [];
-    return JSON.parse(data);
+    try {
+        const data = localStorage.getItem("projects");
+        const projects = data ? JSON.parse(data) : [];
+
+        if (!Array.isArray(projects)) return [];
+
+        return projects.filter((project) => {
+            return project && typeof project.name === "string";
+        });
+    } catch {
+        return [];
+    }
 }
