@@ -1,0 +1,15 @@
+.high {
+    color: red;
+}
+
+.medium {
+    color: orange;
+}
+
+.low {
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
